@@ -8,7 +8,7 @@ import lombok.AllArgsConstructor;
 public class DomainDocumentService implements DocumentService{
   private final DocumentRepository documentRepository;
   @Override
-  public Document getDocumentById(String userId, String documentType) throws Exception {
+  public Document getDocumentById(String userId, String documentType) {
     return documentRepository.findById(userId, documentType);
   }
 }
